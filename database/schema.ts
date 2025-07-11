@@ -31,7 +31,7 @@ export const setupDatabase = async () => {
             note TEXT,                                          -- Ghi chú (nullable)
             categoryId TEXT NOT NULL,                           -- khoá ngoại -> categories.id
             createdAt TEXT NOT NULL,                            -- Ngày tạo
-            updatedAt TEXT NOT NULL                             -- Ngày cập nhật
+            updatedAt TEXT NOT NULL,                             -- Ngày cập nhật
             FOREIGN KEY (categoryId) REFERENCES categories(id)  -- Ràng buộc với bảng categories
         )    
     `);
